@@ -1,0 +1,10 @@
+*.o
+a.out
+*.ko
+*.cmd
+*.mod
+*.order
+*.symvers
+*.mod.c
+*.der
+*.priv

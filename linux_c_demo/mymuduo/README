@@ -1,0 +1,12 @@
+```
+sudo apt install g++ cmake make libboost-dev
+./build.sh 
+./build.sh install
+mv include/muduo /usr/include
+mv lib/* /usr/local/lib
+```
+
+
+g++ mysocks4a.cc -L/home/duolaoa/build/release-cpp11/lib  -lmuduo_base -lpthread -lmuduo_net -I /home/duolaoa/muduo/
+g++   mynginx.cc ../muduo/net/http/HttpContext.cc ../muduo/net/http/HttpResponse.cc ../muduo/net/http/HttpServer.cc  -I/h
+ome/duolaoa/muduo/ -lmuduo_net -lmuduo_base  -lpthread      -std=c++11

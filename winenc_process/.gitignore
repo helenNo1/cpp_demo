@@ -1,0 +1,7 @@
+*.exe
+*.pdb
+ipch/
+Release/
+Debug/
+**/Release/
+**/Debug/

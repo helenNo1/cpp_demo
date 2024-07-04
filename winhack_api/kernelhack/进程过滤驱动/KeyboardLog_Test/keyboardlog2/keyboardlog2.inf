@@ -1,0 +1,62 @@
+;
+; keyboardlog2.inf
+;
+
+[Version]
+Signature   = "$WINDOWS NT$"
+Class       = System ; TODO: specify appropriate Class
+ClassGuid   = {4d36e97d-e325-11ce-bfc1-08002be10318} ; TODO: specify appropriate ClassGuid
+Provider    = %ManufacturerName%
+CatalogFile = keyboardlog2.cat
+DriverVer   = ; TODO: set DriverVer in stampinf property pages
+PnpLockdown = 1
+
+[DestinationDirs]
+DefaultDestDir = 13
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+keyboardlog2.sys = 1,,
+
+;*****************************************
+; Install Section
+;*****************************************
+
+[Manufacturer]
+%ManufacturerName% = Standard,NT$ARCH$.10.0...16299 ; %13% support introduced in build 16299
+
+[Standard.NT$ARCH$.10.0...16299]
+%keyboardlog2.DeviceDesc% = keyboardlog2_Device, Root\keyboardlog2 ; TODO: edit hw-id
+
+[keyboardlog2_Device.NT]
+CopyFiles = File_Copy
+
+[File_Copy]
+keyboardlog2.sys
+
+;-------------- Service installation
+[keyboardlog2_Device.NT.Services]
+AddService = keyboardlog2,%SPSVCINST_ASSOCSERVICE%, keyboardlog2_Service_Inst
+
+; -------------- keyboardlog2 driver install sections
+[keyboardlog2_Service_Inst]
+DisplayName    = %keyboardlog2.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %13%\keyboardlog2.sys
+
+[keyboardlog2_Device.NT.Wdf]
+KmdfService = keyboardlog2, keyboardlog2_wdfsect
+
+[keyboardlog2_wdfsect]
+KmdfLibraryVersion = $KMDFVERSION$
+
+[Strings]
+SPSVCINST_ASSOCSERVICE = 0x00000002
+ManufacturerName = "<Your manufacturer name>" ;TODO: Replace with your manufacturer name
+DiskName = "keyboardlog2 Installation Disk"
+keyboardlog2.DeviceDesc = "keyboardlog2 Device"
+keyboardlog2.SVCDESC = "keyboardlog2 Service"

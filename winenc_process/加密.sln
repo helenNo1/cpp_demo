@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "写管道", "写管道\写管道.vcxproj", "{D761882B-0E05-4835-98FB-0C292BC7F82C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "读管道", "读管道\读管道.vcxproj", "{6AE81C47-E736-466E-9EA8-C30C18517AFC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "启动多个读管道", "启动多个读管道\启动多个读管道.vcxproj", "{462AE201-38D3-4AF2-AF78-E355DD0862ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D761882B-0E05-4835-98FB-0C292BC7F82C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D761882B-0E05-4835-98FB-0C292BC7F82C}.Debug|Win32.Build.0 = Debug|Win32
+		{D761882B-0E05-4835-98FB-0C292BC7F82C}.Release|Win32.ActiveCfg = Release|Win32
+		{D761882B-0E05-4835-98FB-0C292BC7F82C}.Release|Win32.Build.0 = Release|Win32
+		{6AE81C47-E736-466E-9EA8-C30C18517AFC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6AE81C47-E736-466E-9EA8-C30C18517AFC}.Debug|Win32.Build.0 = Debug|Win32
+		{6AE81C47-E736-466E-9EA8-C30C18517AFC}.Release|Win32.ActiveCfg = Release|Win32
+		{6AE81C47-E736-466E-9EA8-C30C18517AFC}.Release|Win32.Build.0 = Release|Win32
+		{462AE201-38D3-4AF2-AF78-E355DD0862ED}.Debug|Win32.ActiveCfg = Debug|Win32
+		{462AE201-38D3-4AF2-AF78-E355DD0862ED}.Debug|Win32.Build.0 = Debug|Win32
+		{462AE201-38D3-4AF2-AF78-E355DD0862ED}.Release|Win32.ActiveCfg = Release|Win32
+		{462AE201-38D3-4AF2-AF78-E355DD0862ED}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
