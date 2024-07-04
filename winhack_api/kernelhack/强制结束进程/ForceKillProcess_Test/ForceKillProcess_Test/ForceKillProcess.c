@@ -108,7 +108,7 @@ PVOID GetPspLoadImageNotifyRoutine()
 #ifdef _WIN64
 			// 64 λ
 			// E9
-			pSpecialData[0] = 0xE9;
+			pSpecialData[0] = 0xE8;
 			ulSpecialDataSize = 1;
 #else
 			// 32 λ
